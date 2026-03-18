@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Specificity Game</title>
-    <!-- External stylesheet: sets h1 color to royalblue, font-style italic, padding 10px -->
     <link rel="stylesheet" href="style.css">
     <style>
         p {
@@ -44,9 +43,6 @@
             letter-spacing: 0.03em;
         }
 
-        /* Internal CSS for h1 — overrides style.css because this <style> block
-           appears after the <link> tag, so source order gives it the win
-           when both rules have equal specificity (both are element selectors). */
         h1 {
             color: darkgreen;
         }

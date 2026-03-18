@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Course homepage - Heading hierarchy example</title>
-  <!-- External stylesheet (Lab 4 Exercise 2) -->
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Skip link */
     .skip-link {
       position: absolute;
       left: -9999px;
@@ -28,14 +26,11 @@
       z-index: 1000;
     }
 
-    /* Internal CSS (Lab 4 Exercise 2 requirement) –
-       overrides the h1 italic set in style.css for the homepage h1 only */
     h1 {
       color: #1e1b4b;
       font-style: normal;
     }
 
-    /* Internal CSS: section headings */
     section h2 {
       border-bottom: 2px solid #6d28d9;
       padding-bottom: 4px;
@@ -98,7 +93,6 @@
         </tbody>
       </table>
     </section>
-    <!-- Exercise 2 – Personal Skills table -->
     <section>
       <h2>Personal skills</h2>
       <table class="skills-table">
@@ -111,7 +105,6 @@
           <tr>
             <th scope="row" rowspan="3">Programming</th>
             <td>JavaScript</td>
-            <!-- inline CSS: highlight strong skill in light green -->
             <td class="skill-good">Advanced</td>
           </tr>
           <tr>
@@ -120,7 +113,6 @@
           </tr>
           <tr>
             <td>Java</td>
-            <!-- inline CSS: highlight weak proficiency in light red -->
             <td class="skill-weak" style="font-style: italic;">-</td>
           </tr>
           <tr>
@@ -138,17 +130,15 @@
           </tr>
           <tr>
             <th scope="row">Other</th>
-            <!-- inline CSS: emphasise Git -->
             <td colspan="2" style="font-weight: bold; letter-spacing: 0.03em;">Git</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <!-- Exercise 3 – Personal Projects Portfolio table -->
     <section>
       <h2>Personal projects portfolio</h2>
-      <table border="1">
+      <table >
         <caption>Overview of personal projects by Benjamin Melinette</caption>
         <thead>
           <tr>
@@ -161,7 +151,6 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Monitoring – two rows: main + key features detail -->
           <tr>
             <td rowspan="2">Monitoring</td>
             <td>Real-time applicative monitoring platform: centralises logs, tracks errors, visualises performance metrics and supervises builds &amp; deployments.</td>
@@ -186,7 +175,6 @@
             <td colspan="3">Features: comparative statistics, anomaly detection, real-time dashboards across 7 views.</td>
             <td>Dashboard / Analytics</td>
           </tr>
-          <!-- L'étoile d'or -->
           <tr>
             <td>L'étoile d'or</td>
             <td>Showcase website for a fictional Parisian high-end restaurant. Simple, performant and SEO-optimised, made with Astro.</td>
@@ -206,7 +194,6 @@
             <td><a href="https://benjaminmelinette.github.io/etoiledor/">Live demo</a></td>
             <td>Restaurant / Design</td>
           </tr>
-          <!-- Protection Civile -->
           <tr>
             <td>Protection Civile</td>
             <td>Collaborative web app for a civil protection organisation: security, role-based navigation, real-time stock inventory and form management. Built in duo with Elias Fassella.</td>
@@ -227,7 +214,6 @@
             <td>Private</td>
             <td>Full-stack / Civic</td>
           </tr>
-          <!-- Personal Portfolio -->
           <tr>
             <td>Personal Portfolio</td>
             <td>Custom portfolio website showcasing web projects for restaurants, shops and craftspeople. Ultra-fast, SEO-optimised, with dark mode and a preloader.</td>
@@ -248,7 +234,6 @@
             <td><a href="https://benjaminmelinette.studiobemi.fr">Live site</a></td>
             <td>Portfolio / Design</td>
           </tr>
-          <!-- Burgundy Buns -->
           <tr>
             <td>Burgundy Buns</td>
             <td>Fictional e-commerce burger store built during summer 2024 to learn UI/UX fundamentals. Design-first approach via Figma prototyping.</td>

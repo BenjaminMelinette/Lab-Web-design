@@ -6,7 +6,6 @@
   <title>Contact us</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Skip link - visible only on focus */
     .skip-link {
       position: absolute;
       left: -9999px;
@@ -26,7 +25,6 @@
       color: #fff;
       z-index: 1000;
     }
-    /* Helper text */
     .helper-text {
       display: block;
       font-size: 0.875em;
@@ -36,7 +34,6 @@
   </style>
 </head>
 <body>
-  <!-- Skip link must be the very first focusable element -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header>
@@ -56,7 +53,6 @@
     <section>
       <form aria-label="Contact form" novalidate>
 
-        <!-- Fieldset 1 – Your details -->
         <fieldset>
           <legend>Your details</legend>
 
@@ -94,7 +90,6 @@
           </div>
         </fieldset>
 
-        <!-- Fieldset 2 – Your message -->
         <fieldset>
           <legend>Your message</legend>
 
@@ -111,7 +106,6 @@
 
           <div>
             <label for="message">Message <span aria-hidden="true">*</span></label>
-            <!-- Helper text associated via aria-describedby (accessibility task 5) -->
             <textarea
               id="message"
               name="message"
@@ -125,7 +119,6 @@
           </div>
         </fieldset>
 
-        <!-- Fieldset 3 – Single question with radio buttons -->
         <fieldset>
           <legend>How did you hear about us?</legend>
 
@@ -155,10 +148,9 @@
       </form>
     </section>
 
-    <!-- Exercise 1 – Messages Received table -->
     <section>
       <h2>Messages received</h2>
-      <table border="1">
+      <table>
         <caption>Messages received via the contact form</caption>
         <thead>
           <tr>
@@ -171,7 +163,6 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Alice sent two messages → Name and Email use rowspan="2" -->
           <tr>
             <td>1</td>
             <td rowspan="2">Alice Martin</td>
@@ -186,7 +177,6 @@
             <td>2025-01-15</td>
             <td>High</td>
           </tr>
-          <!-- Bob sent one message -->
           <tr>
             <td>3</td>
             <td>Bob Dupont</td>
@@ -195,7 +185,6 @@
             <td>2025-01-18</td>
             <td>Low</td>
           </tr>
-          <!-- Carol sent three messages → Name and Email use rowspan="3" -->
           <tr>
             <td>4</td>
             <td rowspan="3">Carol Smith</td>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Contact us</title>
+  <style>
+    /* Skip link - visible only on focus */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      display: inline-block;
+      padding: 0.5em 1em;
+      background: #000;
+      color: #fff;
+      z-index: 1000;
+    }
+    /* Helper text */
+    .helper-text {
+      display: block;
+      font-size: 0.875em;
+      color: #555;
+      margin-top: 0.25em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip link must be the very first focusable element -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <h1>Contact us</h1>
+    <p>Get in touch with us using the form below.</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Homepage</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section>
+      <form aria-label="Contact form" novalidate>
+
+        <!-- Fieldset 1 – Your details -->
+        <fieldset>
+          <legend>Your details</legend>
+
+          <div>
+            <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="email">Email address <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="phone">Phone number (optional)</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              autocomplete="tel"
+              pattern="[0-9\s\+\-\(\)]{7,20}"
+            >
+          </div>
+        </fieldset>
+
+        <!-- Fieldset 2 – Your message -->
+        <fieldset>
+          <legend>Your message</legend>
+
+          <div>
+            <label for="subject">Subject <span aria-hidden="true">*</span></label>
+            <select id="subject" name="subject" required>
+              <option value="">Please select a topic</option>
+              <option value="general">General enquiry</option>
+              <option value="support">Technical support</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <!-- Helper text associated via aria-describedby (accessibility task 5) -->
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              aria-describedby="message-hint"
+              required
+            ></textarea>
+            <span id="message-hint" class="helper-text">
+              Please include as much detail as possible so we can respond quickly. Maximum 1000 characters.
+            </span>
+          </div>
+        </fieldset>
+
+        <!-- Fieldset 3 – Single question with radio buttons -->
+        <fieldset>
+          <legend>How did you hear about us?</legend>
+
+          <div>
+            <input type="radio" id="source-search" name="source" value="search" required>
+            <label for="source-search">Search engine</label>
+          </div>
+
+          <div>
+            <input type="radio" id="source-social" name="source" value="social">
+            <label for="source-social">Social media</label>
+          </div>
+
+          <div>
+            <input type="radio" id="source-friend" name="source" value="friend">
+            <label for="source-friend">A friend or colleague</label>
+          </div>
+
+          <div>
+            <input type="radio" id="source-other" name="source" value="other">
+            <label for="source-other">Other</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Send message</button>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Benjamin Melinette · Web design · Semester</p>
+  </footer>
+</body>
+</html>

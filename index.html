@@ -4,22 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Course homepage - Heading hierarchy example</title>
+  <style>
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      display: inline-block;
+      padding: 0.5em 1em;
+      background: #000;
+      color: #fff;
+      z-index: 1000;
+    }
+  </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header>
     <h1>My course homepage</h1>
     <p>Optional tagline here.</p>
   </header>
   <nav aria-label="Main navigation">
     <ul>
+      <li><a href="index.html">Homepage</a></li>
       <li><a href="#">Course site</a></li>
       <li><a href="#">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
   <main id="main-content">
     <section>
       <h2>About me / Course goals</h2>
       <p>Benjamin Melinette, Erasmus, learn how to design a proper webapp.</p>
+    </section>
+    <section>
+      <h2>Labs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Lab</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lab 1</td>
+            <td>Document structure &amp; heading hierarchy</td>
+            <td><a href="index.html">Homepage</a></td>
+          </tr>
+          <tr>
+            <td>Lab 2</td>
+            <td>Accessible forms &amp; keyboard navigation</td>
+            <td><a href="contact.html">Contact form</a></td>
+          </tr>
+          <tr>
+            <td>Lab 3</td>
+            <td>Coming soon</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Lab 4</td>
+            <td>Coming soon</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
     <section>
       <h2>Photo</h2>

@@ -152,6 +152,76 @@
 
       </form>
     </section>
+
+    <!-- Exercise 1 – Messages Received table -->
+    <section>
+      <h2>Messages received</h2>
+      <table border="1">
+        <caption>Messages received via the contact form</caption>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Message</th>
+            <th scope="col">Date</th>
+            <th scope="col">Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Alice sent two messages → Name and Email use rowspan="2" -->
+          <tr>
+            <td>1</td>
+            <td rowspan="2">Alice Martin</td>
+            <td rowspan="2"><a href="mailto:alice.martin@example.com">alice.martin@example.com</a></td>
+            <td>Hello, I need help with my account setup.</td>
+            <td>2025-01-10</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Follow-up: still waiting for a response.</td>
+            <td>2025-01-15</td>
+            <td>High</td>
+          </tr>
+          <!-- Bob sent one message -->
+          <tr>
+            <td>3</td>
+            <td>Bob Dupont</td>
+            <td><a href="mailto:bob.dupont@example.com">bob.dupont@example.com</a></td>
+            <td>Quick question about the course schedule.</td>
+            <td>2025-01-18</td>
+            <td>Low</td>
+          </tr>
+          <!-- Carol sent three messages → Name and Email use rowspan="3" -->
+          <tr>
+            <td>4</td>
+            <td rowspan="3">Carol Smith</td>
+            <td rowspan="3"><a href="mailto:carol.smith@example.com">carol.smith@example.com</a></td>
+            <td>I would like to inquire about the registration process.</td>
+            <td>2025-01-20</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Could you send me the course materials?</td>
+            <td>2025-01-21</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Thank you for your help!</td>
+            <td>2025-01-22</td>
+            <td>Low</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">Total messages: 6</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
   </main>
 
   <footer>

@@ -68,8 +68,8 @@
           </tr>
           <tr>
             <td>Lab 3</td>
-            <td>Coming soon</td>
-            <td>—</td>
+            <td>HTML tables &amp; complex data layouts</td>
+            <td><a href="index.html">Homepage</a> / <a href="contact.html">Contact</a></td>
           </tr>
           <tr>
             <td>Lab 4</td>
@@ -79,6 +79,183 @@
         </tbody>
       </table>
     </section>
+    <!-- Exercise 2 – Personal Skills table -->
+    <section>
+      <h2>Personal skills</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th scope="col" colspan="3">Personal Skills</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" rowspan="3">Programming</th>
+            <td>JavaScript</td>
+            <td>Advanced</td>
+          </tr>
+          <tr>
+            <td>C/C++</td>
+            <td>Intermediate</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th scope="row" rowspan="4">Design</th>
+            <td colspan="2">Figma</td>
+          </tr>
+          <tr>
+            <td colspan="2">Adobe XD</td>
+          </tr>
+          <tr>
+            <td colspan="2">Photoshop</td>
+          </tr>
+          <tr>
+            <td colspan="2">UI/UX</td>
+          </tr>
+          <tr>
+            <th scope="row">Other</th>
+            <td colspan="2">Git</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Exercise 3 – Personal Projects Portfolio table -->
+    <section>
+      <h2>Personal projects portfolio</h2>
+      <table border="1">
+        <caption>Overview of personal projects by Benjamin Melinette</caption>
+        <thead>
+          <tr>
+            <th scope="col">Project Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Technologies</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col">Link</th>
+            <th scope="col">Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Monitoring – two rows: main + key features detail -->
+          <tr>
+            <td rowspan="2">Monitoring</td>
+            <td>Real-time applicative monitoring platform: centralises logs, tracks errors, visualises performance metrics and supervises builds &amp; deployments.</td>
+            <td>
+              <ul>
+                <li>Angular</li>
+                <li>NestJS</li>
+                <li>QuestDB</li>
+              </ul>
+            </td>
+            <td>
+              <select aria-label="Difficulty for Monitoring">
+                <option>Low</option>
+                <option>Medium</option>
+                <option selected>High</option>
+              </select>
+            </td>
+            <td rowspan="2">Private</td>
+            <td>Observability</td>
+          </tr>
+          <tr>
+            <td colspan="3">Features: comparative statistics, anomaly detection, real-time dashboards across 7 views.</td>
+            <td>Dashboard / Analytics</td>
+          </tr>
+          <!-- L'étoile d'or -->
+          <tr>
+            <td>L'étoile d'or</td>
+            <td>Showcase website for a fictional Parisian high-end restaurant. Simple, performant and SEO-optimised, made with Astro.</td>
+            <td>
+              <ul>
+                <li>Astro</li>
+                <li>CSS</li>
+              </ul>
+            </td>
+            <td>
+              <select aria-label="Difficulty for L'étoile d'or">
+                <option selected>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+              </select>
+            </td>
+            <td><a href="https://benjaminmelinette.github.io/etoiledor/">Live demo</a></td>
+            <td>Restaurant / Design</td>
+          </tr>
+          <!-- Protection Civile -->
+          <tr>
+            <td>Protection Civile</td>
+            <td>Collaborative web app for a civil protection organisation: security, role-based navigation, real-time stock inventory and form management. Built in duo with Elias Fassella.</td>
+            <td>
+              <ul>
+                <li>Angular</li>
+                <li>NestJS</li>
+                <li>CI/CD</li>
+              </ul>
+            </td>
+            <td>
+              <select aria-label="Difficulty for Protection Civile">
+                <option>Low</option>
+                <option>Medium</option>
+                <option selected>High</option>
+              </select>
+            </td>
+            <td>Private</td>
+            <td>Full-stack / Civic</td>
+          </tr>
+          <!-- Personal Portfolio -->
+          <tr>
+            <td>Personal Portfolio</td>
+            <td>Custom portfolio website showcasing web projects for restaurants, shops and craftspeople. Ultra-fast, SEO-optimised, with dark mode and a preloader.</td>
+            <td>
+              <ul>
+                <li>Astro</li>
+                <li>React</li>
+                <li>CSS</li>
+              </ul>
+            </td>
+            <td>
+              <select aria-label="Difficulty for Personal Portfolio">
+                <option>Low</option>
+                <option selected>Medium</option>
+                <option>High</option>
+              </select>
+            </td>
+            <td><a href="https://benjaminmelinette.studiobemi.fr">Live site</a></td>
+            <td>Portfolio / Design</td>
+          </tr>
+          <!-- Burgundy Buns -->
+          <tr>
+            <td>Burgundy Buns</td>
+            <td>Fictional e-commerce burger store built during summer 2024 to learn UI/UX fundamentals. Design-first approach via Figma prototyping.</td>
+            <td>
+              <ul>
+                <li>Angular</li>
+                <li>CSS</li>
+                <li>Figma</li>
+              </ul>
+            </td>
+            <td>
+              <select aria-label="Difficulty for Burgundy Buns">
+                <option>Low</option>
+                <option selected>Medium</option>
+                <option>High</option>
+              </select>
+            </td>
+            <td><a href="https://benjaminmelinette.github.io/Burgundy_Buns/">Live demo</a></td>
+            <td>E-Commerce / UI/UX</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">Total projects: 5</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
     <section>
       <h2>Photo</h2>
       <img src="data:image/jpeg;base64,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" alt="A smiling frenchie">

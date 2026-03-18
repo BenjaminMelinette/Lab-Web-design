@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Course homepage - Heading hierarchy example</title>
+  <!-- External stylesheet (Lab 4 Exercise 2) -->
+  <link rel="stylesheet" href="style.css">
   <style>
+    /* Skip link */
     .skip-link {
       position: absolute;
       left: -9999px;
@@ -24,6 +27,20 @@
       color: #fff;
       z-index: 1000;
     }
+
+    /* Internal CSS (Lab 4 Exercise 2 requirement) –
+       overrides the h1 italic set in style.css for the homepage h1 only */
+    h1 {
+      color: #1e1b4b;
+      font-style: normal;
+    }
+
+    /* Internal CSS: section headings */
+    section h2 {
+      border-bottom: 2px solid #6d28d9;
+      padding-bottom: 4px;
+      color: #3b0764;
+    }
   </style>
 </head>
 <body>
@@ -38,6 +55,8 @@
       <li><a href="#">Course site</a></li>
       <li><a href="#">Resources</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="card.html">Business card</a></li>
+      <li><a href="specificity.html">Specificity</a></li>
     </ul>
   </nav>
   <main id="main-content">
@@ -82,7 +101,7 @@
     <!-- Exercise 2 – Personal Skills table -->
     <section>
       <h2>Personal skills</h2>
-      <table border="1">
+      <table class="skills-table">
         <thead>
           <tr>
             <th scope="col" colspan="3">Personal Skills</th>
@@ -92,7 +111,8 @@
           <tr>
             <th scope="row" rowspan="3">Programming</th>
             <td>JavaScript</td>
-            <td>Advanced</td>
+            <!-- inline CSS: highlight strong skill in light green -->
+            <td class="skill-good">Advanced</td>
           </tr>
           <tr>
             <td>C/C++</td>
@@ -100,11 +120,12 @@
           </tr>
           <tr>
             <td>Java</td>
-            <td>-</td>
+            <!-- inline CSS: highlight weak proficiency in light red -->
+            <td class="skill-weak" style="font-style: italic;">-</td>
           </tr>
           <tr>
             <th scope="row" rowspan="4">Design</th>
-            <td colspan="2">Figma</td>
+            <td colspan="2" class="skill-good">Figma</td>
           </tr>
           <tr>
             <td colspan="2">Adobe XD</td>
@@ -117,7 +138,8 @@
           </tr>
           <tr>
             <th scope="row">Other</th>
-            <td colspan="2">Git</td>
+            <!-- inline CSS: emphasise Git -->
+            <td colspan="2" style="font-weight: bold; letter-spacing: 0.03em;">Git</td>
           </tr>
         </tbody>
       </table>

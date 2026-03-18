@@ -1,0 +1,9 @@
+Paragraph A only matches the p selector, so it gets color gray, font-size 1rem, Georgia font, line-height 1.4 and padding 4px 0.
+
+Paragraph B matches both p and .info. Since .info has higher specificity it overrides the color (steelblue), font-size (1.25rem), font-family (Arial) and padding. It also adds a background color and a left border. Line-height 1.4 still comes from p because .info does not set it.
+
+Paragraph C matches p and #warning. The id selector wins for most properties, giving it color darkred, small italic uppercase text with a dashed red border and a light red background. Line-height again comes from p.
+
+Paragraph D matches all four rules: p, .info, #warning and #warning.info. For color, all four rules define it but #warning.info has the highest specificity (one id + one class = 0,1,1,0) so the browser uses darkorange. For font-family, #warning.info does not declare it, so the browser falls back to the next highest rule that does, which is #warning, giving Courier New.
+
+For the h1 exercise, style.css sets color to royalblue and the internal style block sets it to darkgreen. Both are plain element selectors so their specificity is equal. When specificity ties, source order decides and the internal style block is parsed after the external link, so darkgreen wins. The font-style italic and padding 10px come from style.css without conflict since the internal rule does not touch them.

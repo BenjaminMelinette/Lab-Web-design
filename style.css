@@ -1,0 +1,84 @@
+/* ============================================================
+   style.css – Lab 4 external stylesheet
+   Used by: specificity.html, index.html
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   Exercise 1 – h1 base style (used in specificity.html)
+   ---------------------------------------------------------- */
+
+/* Element selector */
+h1 {
+  color: royalblue;
+  font-style: italic;
+  padding: 10px;
+}
+
+/* ----------------------------------------------------------
+   Exercise 2 – Personal Skills table
+   Uses: class selector, descendant selector, :nth-child
+   ---------------------------------------------------------- */
+
+/* Class selector: overall table layout */
+.skills-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 480px;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+/* Descendant selector: dark-purple spanning header */
+.skills-table thead th {
+  background-color: #3b0764;
+  color: #ffffff;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Descendant selector: category row-headers (Programming, Design, Other) */
+.skills-table tbody th {
+  background-color: #6d28d9;
+  color: #ffffff;
+  padding: 10px 14px;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+/* All data cells */
+.skills-table td {
+  padding: 8px 14px;
+  border: 1px solid #d8b4fe;
+}
+
+/* :nth-child – alternating row colours (odd = white, even = light purple) */
+.skills-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+.skills-table tbody tr:nth-child(even) td {
+  background-color: #f3e8ff;
+}
+
+/* Hover effect on tbody rows */
+.skills-table tbody tr:hover td {
+  background-color: #e9d5ff;
+  transition: background-color 0.15s ease;
+}
+
+/* Class selector: highlight – used for good/weak skill cells */
+.skill-good {
+  background-color: #d1fae5 !important; /* light green */
+  color: #065f46;
+  font-weight: bold;
+}
+
+.skill-weak {
+  background-color: #fee2e2 !important; /* light red */
+  color: #991b1b;
+}

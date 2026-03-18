@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Benjamin Melinette – Business Card</title>
+  <link rel="stylesheet" href="card.css">
+</head>
+<body>
+  <div class="card">
+    <!-- Replace src with your actual photo path if needed -->
+    <img src="photo.jpg"
+         alt="Portrait of Benjamin Melinette"
+         class="avatar"
+         id="profile-photo"
+         onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';">
+    <!-- CSS fallback shown when no photo file exists -->
+    <div class="avatar-fallback" id="avatar-fallback" aria-hidden="true">BM</div>
+
+    <h1 class="name" id="card-name">Benjamin Melinette</h1>
+    <p class="subtitle">Web Developer &amp; Designer<br>
+      <span class="tag">Year 4 · Erasmus</span>
+    </p>
+
+    <hr class="divider">
+
+    <div class="links">
+      <a href="mailto:hello@studiobemi.fr"
+         class="link-item"
+         id="email-link">
+        <span class="link-icon" aria-hidden="true">✉</span>
+        hello@studiobemi.fr
+      </a>
+      <a href="https://github.com/BenjaminMelinette"
+         class="link-item"
+         id="github-link"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="link-icon" aria-hidden="true">⌥</span>
+        github.com/BenjaminMelinette
+      </a>
+      <a href="https://benjaminmelinette.studiobemi.fr"
+         class="link-item"
+         id="portfolio-link"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="link-icon" aria-hidden="true">◈</span>
+        studiobemi.fr
+      </a>
+    </div>
+  </div>
+</body>
+</html>

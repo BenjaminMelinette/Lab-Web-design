@@ -54,12 +54,7 @@
         align-items: center;
     }
 
-    h3{
-        margin: 0;
-        padding: 0;
-    }
-
-    p{
+    h3, p{
         margin: 0;
         padding: 0;
     }
@@ -68,6 +63,11 @@
         background-color: chocolate !important;
         border-radius: 10 !important;
         border: solid 2px red !important;
+    }
+
+    table, th, td {
+        border: 1px solid;
+        background-color: white;
     }
 
   </style>
@@ -120,11 +120,28 @@
         <div class="card">
             <h2>Projects</h2>
             <div class="card-content">
-                <ul>
-                    <li>Database engine | Rust</li>
-                    <li>Website Builder | Astro</li>
-                    <li>Raytracer | C</li>
-                </ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Project Name</th>
+                            <th scope="col">Language</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Website Builder</td>
+                            <td>Astro</td>
+                        </tr>
+                        <tr>
+                            <td>Database Engine</td>
+                            <td>Rust</td>
+                        </tr>
+                        <tr>
+                            <td>Raytracer</td>
+                            <td>C</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="card different">

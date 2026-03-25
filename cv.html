@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Course homepage - Heading hierarchy example</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-card{
+        display: flex;
+        width: 100%;
+        background-color: blue;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1vh;
+    }
+
+    .column-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+    .card{
+        display: flex;
+        justify-content: center;
+        background-color: gray;
+        border-radius: 5px;
+        border: solid 1px black;
+        flex-direction: column;
+        padding: 2vh;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .informations{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        gap: 10px;
+        margin-left: 5vh;
+    }
+
+    h3{
+        margin: 0;
+        padding: 0;
+    }
+
+    p{
+        margin: 0;
+        padding: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My CV</h1>
+  </header>
+
+  <main>
+    <section class="header">
+        <div class="header-card">
+            <h2>Personal Information</h2>
+            <div class="card-content">
+                <div class="informations">
+                    <h3 class="title">Name :</h3>
+                    <p>Benjamin Melinette</p>
+                </div>
+                <div class="informations">
+                    <h3 class="title">Age :</h3>
+                    <p>21</p>
+                </div>
+                <div class="informations">
+                    <h3 class="title">Country :</h3>
+                    <p>France</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="column-card">
+        <div class="card">
+            <h2>Skills</h2>
+            <div class="card-content">
+                <ul>
+                    <li>NestJs</li>
+                    <li>Astro</li>
+                    <li>Angular</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Experiences</h2>
+            <div class="card-content">
+                <ul>
+                    <li>Equasens</li>
+                    <li>Protection Civile</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Projects</h2>
+            <div class="card-content">
+                <ul>
+                    <li>Database engine | Rust</li>
+                    <li>Website Builder | Astro</li>
+                    <li>Raytracer | C</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Contact Details</h2>
+            <div class="card-content">
+                <div class="informations">
+                    <h3 class="title">Email :</h3>
+                    <p>Benjamin.melinette@gmail.com</p>
+                </div>
+                <div class="informations">
+                    <h3 class="title">Website :</h3>
+                    <a href="https://benjaminmelinette.studiobemi.fr">benjaminmelinette.studiobemi.fr</a>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+  <footer style="justify-content: center; text-align: center;">
+    <p>Benjamin Melinette · Web design · Semester</p>
+  </footer>
+</body>
+</html>

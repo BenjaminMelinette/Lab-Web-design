@@ -57,6 +57,10 @@ chatForm.addEventListener("submit", function(event) {
 
     let currentQuestion = questions[currentQuestionIndex];
     let botResponse = document.createElement("div");
+    let separator = document.createElement("div");
+
+    separator.className = "separator";
+
     botResponse.classList.add("message");
     botResponse.innerHTML = `<strong>ChatBot :</strong> `;
     if (userResponse === currentQuestion.correctAnswer) {
@@ -65,6 +69,7 @@ chatForm.addEventListener("submit", function(event) {
         botResponse.innerHTML += currentQuestion.incorrectResponse;
     }
     chatContainer.appendChild(botResponse);
+    chatContainer.appendChild(separator);
 
     currentQuestionIndex = (currentQuestionIndex + 1 ) % questions.length;
     userInput.value = '';

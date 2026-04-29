@@ -51,7 +51,7 @@
 
   <main id="main-content">
     <section>
-      <form aria-label="Contact form" novalidate>
+      <form aria-label="Contact form" id="contactForm">
 
         <fieldset>
           <legend>Your details</legend>
@@ -63,7 +63,6 @@
               id="full-name"
               name="full-name"
               autocomplete="name"
-              required
             >
           </div>
 
@@ -74,18 +73,57 @@
               id="email"
               name="email"
               autocomplete="email"
-              required
             >
           </div>
 
           <div>
-            <label for="phone">Phone number (optional)</label>
+            <label for="phone">Phone number <span aria-hidden="true">*</span></label>
             <input
               type="tel"
               id="phone"
               name="phone"
               autocomplete="tel"
-              pattern="[0-9\s\+\-\(\)]{7,20}"
+            >
+          </div>
+
+          <div>
+            <label for="dob">Date of birth<span aria-hidden="true">*</span></label>
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+            >
+          </div>
+          <div>
+            <label for="age">Age<span aria-hidden="true">*</span></label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+            >
+          </div>
+          <div>
+            <label for="website">Website link<span aria-hidden="true">*</span></label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+            >
+          </div>
+          <div>
+            <label for="fileUpload">File<span aria-hidden="true">*</span></label>
+            <input
+              type="file"
+              id="fileUpload"
+              name="fileUpload"
+            >
+          </div>
+          <div>
+            <label for="color">Color<span aria-hidden="true">*</span></label>
+            <input
+              type="color"
+              id="color"
+              name="color"
             >
           </div>
         </fieldset>
@@ -95,7 +133,7 @@
 
           <div>
             <label for="subject">Subject <span aria-hidden="true">*</span></label>
-            <select id="subject" name="subject" required>
+            <select id="subject" name="subject">
               <option value="">Please select a topic</option>
               <option value="general">General enquiry</option>
               <option value="support">Technical support</option>
@@ -111,7 +149,6 @@
               name="message"
               rows="6"
               aria-describedby="message-hint"
-              required
             ></textarea>
             <span id="message-hint" class="helper-text">
               Please include as much detail as possible so we can respond quickly. Maximum 1000 characters.
@@ -123,7 +160,7 @@
           <legend>How did you hear about us?</legend>
 
           <div>
-            <input type="radio" id="source-search" name="source" value="search" required>
+            <input type="radio" id="source-search" name="source" value="search">
             <label for="source-search">Search engine</label>
           </div>
 
@@ -218,5 +255,6 @@
   <footer>
     <p>Benjamin Melinette · Web design · Semester</p>
   </footer>
+  <script src="contact.js"></script>
 </body>
 </html>

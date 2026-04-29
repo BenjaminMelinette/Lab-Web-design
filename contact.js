@@ -112,6 +112,6 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
             return;
         }
 
-		alert("Thank you for your message, we will answer you soon !");
-        e.preventDefault();
+		let proceed = confirm("Do you want to proceed with the action?");
+        alert(proceed ? "Message sent, we will answer you soon" : "The message hasn't been sent");
 });
